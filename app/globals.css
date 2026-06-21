@@ -255,6 +255,10 @@ button {
   margin-bottom: 0;
 }
 
+.footer-link-panel {
+  margin-bottom: 0;
+}
+
 @media (max-width: 780px) {
   .site-shell {
     width: min(var(--max), calc(100% - 24px));
