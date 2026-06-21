@@ -90,11 +90,10 @@ button {
   padding: 24px;
 }
 
-.hero-panel h1,
 .post-title {
   max-width: 880px;
   margin: 0 0 18px;
-  font-size: clamp(3.5rem, 12vw, 8.5rem);
+  font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 700;
   line-height: 0.92;
 }
@@ -141,19 +140,6 @@ button {
   border: 1px solid var(--line);
   background: var(--panel-strong);
   color: var(--text);
-  padding: 8px 10px;
-}
-
-.hero-meta {
-  flex-wrap: wrap;
-  gap: 10px;
-  display: flex;
-  color: var(--muted);
-}
-
-.hero-meta span {
-  border: 1px solid var(--line);
-  background: var(--panel-strong);
   padding: 8px 10px;
 }
 

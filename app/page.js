@@ -19,19 +19,6 @@ const posts = [
 export default function HomePage() {
   return (
     <>
-      <section className="resume-section hero-panel">
-        <p className="eyebrow">blog.txt</p>
-        <h1>hansmok blog</h1>
-        <p className="lead-copy">
-          A one-page site for notes on software, systems, and the work behind the work.
-        </p>
-        <div className="hero-meta">
-          <span>new york city</span>
-          <span>monospace shell</span>
-          <span>static export</span>
-        </div>
-      </section>
-
       <section className="resume-section">
         <p className="eyebrow">latest.md</p>
         <div className="featured-post">
@@ -60,13 +47,6 @@ export default function HomePage() {
               <p className="lead-copy">{post.excerpt}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="resume-section">
-        <p className="eyebrow">link.txt</p>
-        <div className="content-panel">
-          <p className="lead-copy">Main site: <a href="https://www.hansmok.com/">www.hansmok.com</a></p>
         </div>
       </section>
     </>
