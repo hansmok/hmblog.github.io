@@ -1,58 +1,40 @@
-const posts = [
-  {
-    date: '2026-06-21',
-    title: 'Why I stopped debugging at the UI layer',
-    excerpt: 'A note on stopping at the visible symptom when the failure is usually in the state machine behind it.',
-  },
-  {
-    date: '2026-06-18',
-    title: 'Routing, auth, and the cost of indirection',
-    excerpt: 'Why reverse proxies, identity providers, and DNS combine into one failure domain from the user’s point of view.',
-  },
-  {
-    date: '2026-06-10',
-    title: 'What I want from a personal site',
-    excerpt: 'Low friction, direct navigation, and enough density that the page respects my time.',
-  },
-]
+import Link from "next/link";
 
-export default function HomePage() {
+import { getAllPosts, getPostHref } from "../lib/posts";
+
+export default function BlogIndexPage() {
+  const posts = getAllPosts();
+
   return (
-    <>
-      <section className="resume-section">
-        <p className="eyebrow">latest.md</p>
-        <div className="featured-post">
-          <div className="frame-meta">
-            <span>{posts[0].date}</span>
-            <span>post</span>
-          </div>
-          <h2>{posts[0].title}</h2>
-          <p>{posts[0].excerpt}</p>
-          <a className="frame-link" href="#archive">
-            Jump to archive
-          </a>
-        </div>
-      </section>
+    <div className="blog-home-shell">
+      <div className="blog-home-slot blog-home-slot--top" />
 
-      <section className="resume-section" id="archive">
+      <section className="resume-section archive-section">
         <p className="eyebrow">archive.md</p>
         <div className="stack">
           {posts.map((post) => (
-            <article className="content-panel" key={post.title}>
+            <article className="content-panel" key={post.slug}>
               <div className="frame-meta">
                 <span>{post.date}</span>
                 <span>post</span>
               </div>
-              <h2>{post.title}</h2>
-              <p className="lead-copy">{post.excerpt}</p>
+              <h2>
+                <Link href={getPostHref(post)}>{post.title}</Link>
+              </h2>
+              <p className="lead-copy">{post.summary}</p>
+              <Link className="frame-link" href={getPostHref(post)}>
+                open article
+              </Link>
             </article>
           ))}
         </div>
       </section>
 
-      <a className="corner-link" href="https://www.hansmok.com/" aria-label="Main site">
-        -&gt;
-      </a>
-    </>
-  )
+      <div className="blog-home-slot blog-home-slot--bottom">
+        <a className="blog-main-link blog-main-link--flow" href="https://www.hansmok.com/">
+          Main site -&gt;
+        </a>
+      </div>
+    </div>
+  );
 }
