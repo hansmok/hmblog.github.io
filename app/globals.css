@@ -255,8 +255,27 @@ button {
   margin-bottom: 0;
 }
 
-.footer-link-panel {
-  margin-bottom: 0;
+.corner-link {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid var(--line);
+  background: #07110ff2;
+  color: var(--accent);
+  padding: 10px 12px;
+  line-height: 1;
+  z-index: 20;
+}
+
+.corner-link:hover,
+.corner-link:focus-visible {
+  border-color: var(--accent);
+  background: #0b1715;
+}
+
+.corner-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #28f0c638;
 }
 
 @media (max-width: 780px) {
@@ -291,6 +310,11 @@ button {
   .work-frame {
     min-height: 220px;
     padding: 18px;
+  }
+
+  .corner-link {
+    right: 12px;
+    bottom: 12px;
   }
 }
 

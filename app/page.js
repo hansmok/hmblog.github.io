@@ -50,13 +50,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="resume-section">
-        <div className="content-panel footer-link-panel">
-          <p className="lead-copy">
-            Main site: <a href="https://www.hansmok.com/">www.hansmok.com</a>
-          </p>
-        </div>
-      </section>
+      <a className="corner-link" href="https://www.hansmok.com/" aria-label="Main site">
+        -&gt;
+      </a>
     </>
   )
 }
