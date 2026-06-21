@@ -1,19 +1,15 @@
 ---
 title: musings on the future of agentic system architecture
 date: 2026-06-21
-summary: A working template for writing posts in this blog.
+summary: Where I think agentic design is headed. 
 ---
 
 # Musings on the future of agentic system architecture
 
-## Why this format exists
+## The current situation
 
-This blog uses plain markdown files because they are easy to edit, easy to version, and easy to drop in and out of without touching the site structure.
+Seeing the current landscape of agentic system architecture, it seems to me that a lot of company leadership are making the choice to anchor to one of the firms (bigger F500 types have a more distinct) thing with this. In my opinion, this is the wrong way to go about this. There's an argument to be had about the future of AI (of which I am personally bearish) but the reality is that every couple months the leader between the frontier labs changes. For a while Anthropic and its Claude Code (and Opus) were the king of the hill but for the past couple months now both Codex and GPT 5.5 have been the workhorse for both myself and pretty much all my software engineering friends who have free access to any model of their choosing. I think this points to an obvious pattern; absent true AGI (in which case the entire idea of the first company to create AGI becomes the only winner is finally true) models have effectively become another commodity which you can switch between. This points towards an obvious pattern we've already seen in the past: multi-tenant clouds and cloud agnostic workloads. In our case it's a little less drag and drop since agentic layers do a lot of your service work as well instead of just being your hosting infrastructure as it was in paradigms past.
 
-## What to write here
+## So, what now?
 
-Use short headings to split the piece into sections. Keep paragraphs compact when the point is simple, and let the spacing do the rest.
-
-## A second point
-
-If you need a simple template for a future post, copy this file, change the frontmatter, and replace the body text.
+One thing I've come back to over and over again working at a much smaller company than my last role at Google (where we had essentially unlimited compute and unlimited resources for LLMs) is that the need for the absolute best is really not high for most companies. Yes, people are developing more and faster than ever. But the fundamental business problems we're solving haven't really evolved all that much. Especially in consumer tech or B2B or anything that isn't at the absolute cutting edge of performance or R&D, I'd wager as to say you don't need the absolute best LLM to generate high quality features and work. For most of us, LLMs are a productivity multiplier and not a true novel research apparatus so there isn't a huge requirement to be on the absolute cutting edge of machine learning. After all, your healthcare provider customer doesn't need to know the difference between you providing Opus 4.8 vs Gemma for simple billing classification. They just need to know that it works properly. That's something I've come to discover as well working on our systems. The open source frontier models are often only 3-6 months behind, and their performance delta for simpler tasks are near negligible for all intents and purposes, while being potentially an order of magnitude less in cost and more importantly on company agnostic model as a service providers. I'm predicting that as the agentic system landscape matures, more people will come to the same realization that absent deep research and true AGI, models are essentially as interchangeable as your cloud provider and should be planned around accordingly as such. The next time you are building an LLM based system, consider whether you need to use the latest flash models from the closed source frontier labs, or whether a open source model can do the job just as well because you'd probably be surprised.
