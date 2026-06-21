@@ -518,8 +518,13 @@ h1 {
   min-height: 0;
 }
 
-.blog-home-slot--bottom {
-  margin-top: 6px;
+.blog-nav-row {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0;
 }
 
 .blog-main-row {
@@ -528,46 +533,10 @@ h1 {
   margin-top: 4px;
 }
 
-.blog-main-link {
-  display: inline-flex;
-  border: 1px solid var(--line);
-  background: #07110ff2;
-  color: var(--accent);
-  padding: 10px 12px;
-  line-height: 1;
-  width: fit-content;
-}
-
-.blog-main-link:hover,
-.blog-main-link:focus-visible {
-  border-color: var(--accent);
-  background: #0b1715;
-}
-
-.blog-main-link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #28f0c638;
-}
-
 .blog-post-shell {
   display: grid;
   gap: 0;
   margin-bottom: 16px;
-}
-
-.blog-post-slot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 56px;
-}
-
-.blog-post-slot--top {
-  align-items: flex-start;
-}
-
-.blog-post-slot--bottom {
-  align-items: flex-end;
 }
 
 .blog-post-card {
@@ -576,29 +545,35 @@ h1 {
   padding: 24px;
 }
 
-.blog-main-link--post {
-  margin-left: auto;
-}
-
-.blog-corner-link {
+.blog-nav-link {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   background: #07110ff2;
-  color: var(--accent);
-  padding: 10px 12px;
+  color: var(--text);
+  padding: 9px 11px;
   line-height: 1;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
   width: fit-content;
 }
 
-.blog-corner-link:hover,
-.blog-corner-link:focus-visible {
+.blog-nav-link:hover,
+.blog-nav-link:focus-visible {
   border-color: var(--accent);
-  background: #0b1715;
+  background: #07110ff2;
+  box-shadow: none;
+  outline: none;
 }
 
-.blog-corner-link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #28f0c638;
+.blog-nav-link:visited {
+  color: var(--text);
 }
 
 .post-shell {
@@ -606,10 +581,25 @@ h1 {
 }
 
 .post-title {
-  max-width: 12ch;
-  font-size: clamp(2.4rem, 6vw, 5rem);
+  max-width: none;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   line-height: 0.94;
   margin-bottom: 16px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.post-summary {
+  margin-bottom: 18px;
+  color: var(--text);
+  line-height: 1.65;
 }
 
 .post-body {

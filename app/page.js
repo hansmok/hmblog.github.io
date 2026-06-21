@@ -30,8 +30,8 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
-      <div className="blog-home-slot blog-home-slot--bottom">
-        <a className="blog-main-link blog-main-link--flow" href="https://www.hansmok.com/">
+      <div className="blog-home-slot blog-nav-row">
+        <a className="blog-nav-link" href="https://www.hansmok.com/">
           Main site -&gt;
         </a>
       </div>
