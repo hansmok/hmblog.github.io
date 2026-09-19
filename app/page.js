@@ -10,7 +10,7 @@ export default function BlogIndexPage() {
       <div className="blog-home-slot blog-home-slot--top" />
 
       <section className="resume-section archive-section">
-        <p className="eyebrow">archive.md</p>
+        <h1 className="eyebrow">Archive</h1>
         <div className="stack">
           {posts.map((post) => (
             <article className="content-panel" key={post.slug}>

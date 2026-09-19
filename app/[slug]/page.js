@@ -19,7 +19,6 @@ export default async function BlogPostPage({ params }) {
   return (
     <div className="blog-post-shell">
       <article className="blog-post-card">
-        <p className="eyebrow">article.md</p>
         <h1 className="post-title">{post.title}</h1>
         <div className="post-meta">
           <span>{post.date}</span>
